@@ -1,4 +1,6 @@
 import { useState } from "react";
+import Button from "../../components/Button";
+
 function TodoLayout() {
   const [todoList, setTodoList] = useState([]);
   const [todoText, setTodoText] = useState("");
@@ -23,7 +25,7 @@ function TodoLayout() {
         placeholder="Todo for today"
         onChange={handleInput}
       />
-      <button onClick={addTodo}>Add</button>
+      <Button size="medium" handleClick={addTodo}>Add</Button>
       <ul>
         {todoList.map((todo) => {
           return <li>{todo}</li>;
